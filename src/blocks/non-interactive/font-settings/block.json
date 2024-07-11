@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/webworx-font-settings",
+	"version": "0.1.0",
+	"title": "Webworx Font Settings", 
+	"category": "widgets",
+	"icon": "media-interactive",
+	"description": "Blocks font settings", 
+	"textdomain": "webworx-gutenberg-blocks",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

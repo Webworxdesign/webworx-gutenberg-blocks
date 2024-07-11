@@ -62,7 +62,7 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<div {...blockProps}>
-
+			
 			<Fragment>
                 <InspectorControls>
                     <PanelBody

@@ -74,15 +74,15 @@ const withFontSettings = createHigherOrderComponent((BlockEdit) => {
                             value={fontSize}
                             options={[
                                 { label: 'default', value: '' }, 
-                                { label: 'Jumbo', value: 'has-jumbo-font-size' },
-                                { label: 'H1', value: 'has-h1-font-size' },
-                                { label: 'H2', value: 'has-h2-font-size' },
-                                { label: 'H3', value: 'has-h3-font-size' },
-                                { label: 'H4', value: 'has-h4-font-size' },
-                                { label: 'Body Normal', value: 'has-body-font-size' },
-                                { label: 'Body Medium', value: 'has-body-m-font-size' },
-                                { label: 'Body Large', value: 'has-body-l-font-size' },
-                                { label: 'Body XLarge', value: 'has-body-xl-font-size' },
+                                { label: 'Jumbo', value: 'jumbo' },
+                                { label: 'H1', value: 'h-1' },
+                                { label: 'H2', value: 'h-2' },
+                                { label: 'H3', value: 'h-3' },
+                                { label: 'H4', value: 'h-4' },
+                                { label: 'Body Normal', value: 'body' },
+                                { label: 'Body Medium', value: 'body-m' },
+                                { label: 'Body Large', value: 'body-l' },
+                                { label: 'Body XLarge', value: 'body-xl' },
                             ]}
                             onChange={(v) => {
                                 props.setAttributes({
@@ -104,7 +104,7 @@ addFilter('editor.BlockEdit', 'wwx/with-animate-control', withFontSettings);
  */
 const addExtraClass = (extraProps, blockType, attributes) => {
     if (enableControlOnBlocks.includes(blockType.name) && attributes.fontSize) {
-        extraProps.className = `${extraProps.className} test ${attributes.fontSize}`.trim();
+        extraProps.className = `${extraProps.className}`.trim();
     }
 
     return extraProps;

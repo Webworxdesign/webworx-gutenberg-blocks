@@ -1,13 +1,13 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "create-block/webworx-animations-settings",
+	"name": "create-block/webworx-animations-controls",
 	"version": "0.1.0",
-	"title": "Webworx Animation Settings", 
+	"title": "Webworx Animation Controls", 
 	"category": "widgets",
 	"icon": "media-interactive",
-	"description": "Blocks animations settings", 
-	"textdomain": "webworx-gutenberg-blocks",
+	"description": "Blocks animations controls", 
+	"textdomain": "webworx-animations-controls",
 	"editorScript": "file:./index.js",
 	"render": "file:./render.php",
 	"style": "file:./style-index.css"

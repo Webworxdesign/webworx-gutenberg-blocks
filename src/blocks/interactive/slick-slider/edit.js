@@ -101,13 +101,19 @@ export default function Edit({ attributes, setAttributes }) {
 	}));
 
 	const handleNextSlide = () => {
-		const totalSlides = Math.floor(blockCount / slickOptions.slidesToShow);
-		setAttributes({ editOffset: editOffset >= totalSlides ? 1 : editOffset + 1 });
+		if ( blockCount / slickOptions.slidesToShow >= editOffset) {
+		  setAttributes({ editOffset: editOffset+1 })
+		} else {
+		  setAttributes({ editOffset: 1 })
+		}
 	};
 
 	const handlePrevSlide = () => {
-		const totalSlides = Math.floor(blockCount / slickOptions.slidesToShow);
-		setAttributes({ editOffset: editOffset === 1 ? totalSlides : editOffset - 1 });
+		if ( 1 == editOffset) {  
+			setAttributes({ editOffset: blockCount / slickOptions.slidesToShow }) 
+		} else { 
+			setAttributes({ editOffset: editOffset-1 }) 
+		}
 	};
 
 	useEffect(() => {
@@ -119,8 +125,9 @@ export default function Edit({ attributes, setAttributes }) {
 	blockProps.className += ' ' + theme;
 	blockProps.className += ' ' + 'slides-visible-' + slickOptions.slidesToShow;
 	blockProps.className += ' edit-offset-' + editOffset;
-	console.log(slickOptions.slidesToShow);
 
+	const settings = useSelect('core/block-editor').getTemplate();
+	console.log(settings)
 
 	return (
 		<Fragment>
@@ -232,7 +239,54 @@ export default function Edit({ attributes, setAttributes }) {
 						/>
 					</PanelBody>
 				)}
-				<PanelBody title={__('Responsive Settings', 'slick-slider')}>
+				<PanelBody title='Slider Animation Settings' initialOpen={false}>
+					<ToggleControl
+						label="Fade"
+						checked={slickOptions.fade}
+						onChange={(value) => updateOptions('fade', value)}
+					/>
+					<SelectControl 
+						label="CSS Ease" 
+						value={slickOptions.cssEase}
+						options={[
+							{ label: 'Linear', value: 'linear' },
+							{ label: 'Ease', value: 'ease' },
+							{ label: 'Ease In', value: 'ease-in' },
+							{ label: 'Ease Out', value: 'ease-out' },
+							{ label: 'Ease In Out', value: 'ease-in-out' }
+						]}
+						onChange={(value) => updateOptions('cssEase', value)}
+						/>
+					<RangeControl
+						label="Amount of slides to scroll by"
+						min={1}
+						max={12}
+						value={slickOptions.slidesToScroll}
+						onChange={(value) => updateOptions('slidesToScroll', value)}
+					/>
+					<RangeControl
+						label="Scroll by speed (ms)"
+						value={slickOptions.speed}
+						min={0}
+						max={5000}
+						onChange={(value) => updateOptions('speed', value)}
+					/>
+					<ToggleControl
+						label="Autoplay slides"
+						checked={slickOptions.autoplay}
+						onChange={(value) => updateOptions('autoplay', value)}
+					/>
+					{slickOptions.autoplay && (
+						<RangeControl
+							label="Autoplay speed (ms)"
+							value={slickOptions.autoplaySpeed}
+							min={0}
+							max={5000}
+							onChange={(value) => updateOptions('autoplaySpeed', value)}
+						/>
+					)}
+				</PanelBody>
+				<PanelBody title={__('Responsive Settings', 'slick-slider')} initialOpen={false}>
 					<RangeControl
 						label={__('Breakpoint', 'slick-slider')}
 						value={slickOptions.responsive[0].breakpoint}

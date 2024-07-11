@@ -22,6 +22,8 @@
 			"default": {
 				"slidesToShow": 2,
 				"slidesToScroll": 1,
+				"fade": false,
+				"cssEase": "ease",
 				"speed": 300,
 				"arrows": true,
 				"dots": false,

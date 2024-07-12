@@ -1,0 +1,1 @@
+import*as r from"@wordpress/interactivity";var e={d:(r,o)=>{for(var l in o)e.o(o,l)&&!e.o(r,l)&&Object.defineProperty(r,l,{enumerable:!0,get:o[l]})},o:(r,e)=>Object.prototype.hasOwnProperty.call(r,e)};var o,l;(0,(o={store:()=>r.store},l={},e.d(l,o),l).store)("slick-slider-block",{callbacks:{slickSlider:()=>{console.log("slickSlider")}}});

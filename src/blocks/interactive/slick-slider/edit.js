@@ -126,9 +126,6 @@ export default function Edit({ attributes, setAttributes }) {
 	blockProps.className += ' ' + 'slides-visible-' + slickOptions.slidesToShow;
 	blockProps.className += ' edit-offset-' + editOffset;
 
-	const settings = useSelect('core/block-editor').getTemplate();
-	console.log(settings)
-
 	return (
 		<Fragment>
 			<BlockControls>

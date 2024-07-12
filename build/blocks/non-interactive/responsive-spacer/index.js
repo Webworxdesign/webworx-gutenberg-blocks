@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/blocks/non-interactive/responsive-spacer-block/edit.js":
-/*!********************************************************************!*\
-  !*** ./src/blocks/non-interactive/responsive-spacer-block/edit.js ***!
-  \********************************************************************/
+/***/ "./src/blocks/non-interactive/responsive-spacer/edit.js":
+/*!**************************************************************!*\
+  !*** ./src/blocks/non-interactive/responsive-spacer/edit.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -96,19 +96,19 @@ function Edit({
 
 /***/ }),
 
-/***/ "./src/blocks/non-interactive/responsive-spacer-block/index.js":
-/*!*********************************************************************!*\
-  !*** ./src/blocks/non-interactive/responsive-spacer-block/index.js ***!
-  \*********************************************************************/
+/***/ "./src/blocks/non-interactive/responsive-spacer/index.js":
+/*!***************************************************************!*\
+  !*** ./src/blocks/non-interactive/responsive-spacer/index.js ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/non-interactive/responsive-spacer-block/style.scss");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/non-interactive/responsive-spacer-block/editor.scss");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/non-interactive/responsive-spacer-block/edit.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/blocks/non-interactive/responsive-spacer-block/block.json");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/non-interactive/responsive-spacer/style.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/non-interactive/responsive-spacer/editor.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/non-interactive/responsive-spacer/edit.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/blocks/non-interactive/responsive-spacer/block.json");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
@@ -147,10 +147,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/blocks/non-interactive/responsive-spacer-block/editor.scss":
-/*!************************************************************************!*\
-  !*** ./src/blocks/non-interactive/responsive-spacer-block/editor.scss ***!
-  \************************************************************************/
+/***/ "./src/blocks/non-interactive/responsive-spacer/editor.scss":
+/*!******************************************************************!*\
+  !*** ./src/blocks/non-interactive/responsive-spacer/editor.scss ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -159,10 +159,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/blocks/non-interactive/responsive-spacer-block/style.scss":
-/*!***********************************************************************!*\
-  !*** ./src/blocks/non-interactive/responsive-spacer-block/style.scss ***!
-  \***********************************************************************/
+/***/ "./src/blocks/non-interactive/responsive-spacer/style.scss":
+/*!*****************************************************************!*\
+  !*** ./src/blocks/non-interactive/responsive-spacer/style.scss ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -221,10 +221,10 @@ module.exports = window["wp"]["i18n"];
 
 /***/ }),
 
-/***/ "./src/blocks/non-interactive/responsive-spacer-block/block.json":
-/*!***********************************************************************!*\
-  !*** ./src/blocks/non-interactive/responsive-spacer-block/block.json ***!
-  \***********************************************************************/
+/***/ "./src/blocks/non-interactive/responsive-spacer/block.json":
+/*!*****************************************************************!*\
+  !*** ./src/blocks/non-interactive/responsive-spacer/block.json ***!
+  \*****************************************************************/
 /***/ ((module) => {
 
 module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/responsive-spacer-block","version":"0.1.0","title":"Responsive Spacer","category":"design","icon":"editor-expand","description":"An spacer block with the Interactivity API","example":{},"attributes":{"desktopHeight":{"type":"number","default":100},"tabletHeight":{"type":"number"},"mobileHeight":{"type":"number"}},"textdomain":"responsive-spacer-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
@@ -341,8 +341,8 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"blocks/non-interactive/responsive-spacer-block/index": 0,
-/******/ 			"blocks/non-interactive/responsive-spacer-block/style-index": 0
+/******/ 			"blocks/non-interactive/responsive-spacer/index": 0,
+/******/ 			"blocks/non-interactive/responsive-spacer/style-index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -392,7 +392,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/non-interactive/responsive-spacer-block/style-index"], () => (__webpack_require__("./src/blocks/non-interactive/responsive-spacer-block/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/non-interactive/responsive-spacer/style-index"], () => (__webpack_require__("./src/blocks/non-interactive/responsive-spacer/index.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

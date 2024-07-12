@@ -106,7 +106,7 @@ module.exports = window["wp"]["blocks"];
   \******************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/slick-item","title":"Slick Slider Item","category":"widgets","icon":"media-interactive","description":"An interactive slider item block with the Interactivity API","textdomain":"create-block","supports":{"interactivity":true},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScriptModule":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/slick-item","title":"Slick Slider Item","category":"widgets","icon":"media-interactive","description":"An interactive slider item block with the Interactivity API","parent":["create-block/slick-slider"],"textdomain":"create-block","supports":{"interactivity":true},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScriptModule":"file:./view.js"}');
 
 /***/ })
 

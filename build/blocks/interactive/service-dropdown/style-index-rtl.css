@@ -9,10 +9,11 @@
  */
 .wp-block-create-block-services-dropdown {
   display: block;
-  position: relative;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto 40px;
+  position: relative;
+  z-index: 9;
 }
 .wp-block-create-block-services-dropdown * {
   box-sizing: border-box;

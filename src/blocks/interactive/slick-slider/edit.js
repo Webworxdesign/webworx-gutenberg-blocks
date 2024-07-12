@@ -136,6 +136,9 @@ export default function Edit({ attributes, setAttributes }) {
 					<ToolbarButton label="Navigate Next Slide" onClick={handleNextSlide}>
 						<Dashicon icon="arrow-right-alt" />
 					</ToolbarButton>
+					<ToolbarButton label="Add Slide" onClick={handleNextSlide}>
+						<Dashicon icon="plus-alt" />
+					</ToolbarButton>
 				</ToolbarGroup>
 			</BlockControls>
 			
@@ -254,6 +257,30 @@ export default function Edit({ attributes, setAttributes }) {
 						]}
 						onChange={(value) => updateOptions('cssEase', value)}
 						/>
+					<ToggleControl 
+						label="Adaptive Height"
+						checked={slickOptions.adaptiveHeight} 
+						value={slickOptions.adaptiveHeight}
+						onChange={(value) => updateOptions('adaptiveHeight', value)}
+					/>
+					<ToggleControl 
+						label="Pause on Hover" 
+						checked={slickOptions.pauseOnHover} 
+						value={slickOptions.pauseOnHover}
+						onChange={(value) => updateOptions('pauseOnHover', value)} 
+					/>
+					<ToggleControl 
+						label="Pause on Focus"
+						checked={slickOptions.pauseOnFocus}
+						value={slickOptions.pauseOnFocus}
+						onChange={(value) => updateOptions('pauseOnFocus', value)}
+					/>
+					<ToggleControl 
+						label="Focus on Select" 
+						checked={slickOptions.focusOnSelect} 
+						value={slickOptions.focusOnSelect} 
+						onChange={(value) => updateOptions('focusOnSelect', value)} 
+					/>
 					<RangeControl
 						label="Amount of slides to scroll by"
 						min={1}
@@ -263,9 +290,10 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 					<RangeControl
 						label="Scroll by speed (ms)"
-						value={slickOptions.speed}
+						value={slickOptions.speed} 
+						step={1000}
 						min={0}
-						max={5000}
+						max={50000}
 						onChange={(value) => updateOptions('speed', value)}
 					/>
 					<ToggleControl

@@ -6,6 +6,9 @@
   "category": "widgets",
   "icon": "media-interactive",
   "description": "An interactive slider item block with the Interactivity API",
+  "parent": [
+    "create-block/slick-slider"
+  ],
   "textdomain": "create-block",
   "supports": {
     "interactivity": true

@@ -33,7 +33,6 @@ foreach ($inner_blocks as $inner_block) {
 }
 ?>
 
-    <?php echo '<pre>' . print_r($slick_options_json, true) . '</pre>'; ?>
 <div 
 	<?php echo get_block_wrapper_attributes(); ?> 
 	data-slick='<?php echo esc_attr($slick_options_json); ?>' > 

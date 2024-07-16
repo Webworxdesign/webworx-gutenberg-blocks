@@ -200,11 +200,6 @@ function Edit({
     onClick: handleNextSlide
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.Dashicon, {
     icon: "arrow-right-alt"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.ToolbarButton, {
-    label: "Add Slide",
-    onClick: handleNextSlide
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.Dashicon, {
-    icon: "plus-alt"
   })))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Slider Display Settings', 'slick-slider')
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.SelectControl, {
@@ -391,8 +386,9 @@ function Edit({
   }), slickOptions.autoplay && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.RangeControl, {
     label: "Autoplay speed (ms)",
     value: slickOptions.autoplaySpeed,
+    step: 1000,
     min: 0,
-    max: 5000,
+    max: 10000,
     onChange: value => updateOptions('autoplaySpeed', value)
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Responsive Settings', 'slick-slider'),
@@ -401,7 +397,7 @@ function Edit({
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Breakpoint', 'slick-slider'),
     value: slickOptions.responsive[0].breakpoint,
     min: 1,
-    max: 12,
+    max: 1920,
     onChange: updateResponsiveBreakpoint
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.RangeControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Slides in view (responsive)', 'slick-slider'),

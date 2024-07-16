@@ -25,7 +25,7 @@
   display: flex;
   transition: all 0.5s;
 }
-.wp-block-create-block-slick-slider > .block-editor-inner-blocks .block-list-appender {
+.wp-block-create-block-slick-slider > .block-editor-inner-blocks .block-list-appender.wp-block {
   list-style: none;
   padding: 0;
   position: absolute;
@@ -68,73 +68,73 @@
   left: -45px;
 }
 
-.slides-visible-1 > .wp-block {
+.slides-visible-1 .block-editor-block-list__layout > .wp-block[data-type="create-block/slick-item"] {
   flex-basis: calc(100% / 1) !important;
   max-width: calc(100% / 1) !important;
   min-width: calc(100% / 1) !important;
 }
 
-.slides-visible-2 > .wp-block {
+.slides-visible-2 .block-editor-block-list__layout > .wp-block[data-type="create-block/slick-item"] {
   flex-basis: calc(100% / 2) !important;
   max-width: calc(100% / 2) !important;
   min-width: calc(100% / 2) !important;
 }
 
-.slides-visible-3 > .wp-block {
+.slides-visible-3 .block-editor-block-list__layout > .wp-block[data-type="create-block/slick-item"] {
   flex-basis: calc(100% / 3) !important;
   max-width: calc(100% / 3) !important;
   min-width: calc(100% / 3) !important;
 }
 
-.slides-visible-4 > .wp-block {
+.slides-visible-4 .block-editor-block-list__layout > .wp-block[data-type="create-block/slick-item"] {
   flex-basis: calc(100% / 4) !important;
   max-width: calc(100% / 4) !important;
   min-width: calc(100% / 4) !important;
 }
 
-.slides-visible-5 > .wp-block {
+.slides-visible-5 .block-editor-block-list__layout > .wp-block[data-type="create-block/slick-item"] {
   flex-basis: calc(100% / 5) !important;
   max-width: calc(100% / 5) !important;
   min-width: calc(100% / 5) !important;
 }
 
-.slides-visible-6 > .wp-block {
+.slides-visible-6 .block-editor-block-list__layout > .wp-block[data-type="create-block/slick-item"] {
   flex-basis: calc(100% / 6) !important;
   max-width: calc(100% / 6) !important;
   min-width: calc(100% / 6) !important;
 }
 
-.slides-visible-7 > .wp-block {
+.slides-visible-7 .block-editor-block-list__layout > .wp-block[data-type="create-block/slick-item"] {
   flex-basis: calc(100% / 7) !important;
   max-width: calc(100% / 7) !important;
   min-width: calc(100% / 7) !important;
 }
 
-.slides-visible-8 > .wp-block {
+.slides-visible-8 .block-editor-block-list__layout > .wp-block[data-type="create-block/slick-item"] {
   flex-basis: calc(100% / 8) !important;
   max-width: calc(100% / 8) !important;
   min-width: calc(100% / 8) !important;
 }
 
-.slides-visible-9 > .wp-block {
+.slides-visible-9 .block-editor-block-list__layout > .wp-block[data-type="create-block/slick-item"] {
   flex-basis: calc(100% / 9) !important;
   max-width: calc(100% / 9) !important;
   min-width: calc(100% / 9) !important;
 }
 
-.slides-visible-10 > .wp-block {
+.slides-visible-10 .block-editor-block-list__layout > .wp-block[data-type="create-block/slick-item"] {
   flex-basis: calc(100% / 10) !important;
   max-width: calc(100% / 10) !important;
   min-width: calc(100% / 10) !important;
 }
 
-.slides-visible-11 > .wp-block {
+.slides-visible-11 .block-editor-block-list__layout > .wp-block[data-type="create-block/slick-item"] {
   flex-basis: calc(100% / 11) !important;
   max-width: calc(100% / 11) !important;
   min-width: calc(100% / 11) !important;
 }
 
-.slides-visible-12 > .wp-block {
+.slides-visible-12 .block-editor-block-list__layout > .wp-block[data-type="create-block/slick-item"] {
   flex-basis: calc(100% / 12) !important;
   max-width: calc(100% / 12) !important;
   min-width: calc(100% / 12) !important;

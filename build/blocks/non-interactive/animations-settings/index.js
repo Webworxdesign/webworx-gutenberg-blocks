@@ -20,6 +20,16 @@ module.exports = window["React"];
 
 module.exports = window["lodash"];
 
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["components"];
+
 /***/ })
 
 /******/ 	});
@@ -99,6 +109,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 
 /**
  * External dependencies
@@ -119,8 +131,10 @@ const {
   PanelBody,
   SelectControl,
   ToggleControl,
-  RangeControl
+  RangeControl,
+  TextControl
 } = wp.components;
+
 const {
   addFilter
 } = wp.hooks;
@@ -238,54 +252,25 @@ const withAnimateControl = createHigherOrderComponent(BlockEdit => {
           inName: v
         });
       }
-    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(SelectControl, {
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalNumberControl, {
       label: "Animation Speed",
       help: __('Determines how quickly the element animates into position'),
+      step: 0.5,
+      min: 0,
+      max: 10,
       value: inSpeed,
-      options: [{
-        label: 'Default',
-        value: ''
-      }, {
-        label: 'Slow',
-        value: 'animate__slow'
-      }, {
-        label: 'Slower',
-        value: 'animate__slower'
-      }, {
-        label: 'Fast',
-        value: 'animate__fast'
-      }, {
-        label: 'Faster',
-        value: 'animate__faster'
-      }],
       onChange: v => {
         props.setAttributes({
           inSpeed: v
         });
       }
-    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(SelectControl, {
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalNumberControl, {
       label: "Animation Delay",
       help: __('Adds a delay before the element animates into position'),
       value: inDelay,
-      options: [{
-        label: 'None',
-        value: ''
-      }, {
-        label: '0.5 Second',
-        value: 'animate__delay-1s'
-      }, {
-        label: '1 Second',
-        value: 'animate__delay-2s'
-      }, {
-        label: '1.5 Seconds',
-        value: 'animate__delay-3s'
-      }, {
-        label: '2 Seconds',
-        value: 'animate__delay-4s'
-      }, {
-        label: '2.5 Seconds',
-        value: 'animate__delay-5s'
-      }],
+      step: 0.5,
+      min: 0,
+      max: 10,
       onChange: v => {
         props.setAttributes({
           inDelay: v

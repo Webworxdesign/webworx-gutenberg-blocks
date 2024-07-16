@@ -136,9 +136,6 @@ export default function Edit({ attributes, setAttributes }) {
 					<ToolbarButton label="Navigate Next Slide" onClick={handleNextSlide}>
 						<Dashicon icon="arrow-right-alt" />
 					</ToolbarButton>
-					<ToolbarButton label="Add Slide" onClick={handleNextSlide}>
-						<Dashicon icon="plus-alt" />
-					</ToolbarButton>
 				</ToolbarGroup>
 			</BlockControls>
 			
@@ -305,8 +302,9 @@ export default function Edit({ attributes, setAttributes }) {
 						<RangeControl
 							label="Autoplay speed (ms)"
 							value={slickOptions.autoplaySpeed}
+							step={1000}
 							min={0}
-							max={5000}
+							max={10000}
 							onChange={(value) => updateOptions('autoplaySpeed', value)}
 						/>
 					)}
@@ -316,7 +314,7 @@ export default function Edit({ attributes, setAttributes }) {
 						label={__('Breakpoint', 'slick-slider')}
 						value={slickOptions.responsive[0].breakpoint}
 						min={1}
-						max={12}
+						max={1920}
 						onChange={updateResponsiveBreakpoint}
 					/>
 					<RangeControl

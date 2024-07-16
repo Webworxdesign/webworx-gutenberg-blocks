@@ -15,7 +15,6 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<Fragment>
-
 			<div {...blockProps}>
 				<InnerBlocks
 					template={TEMPLATE}

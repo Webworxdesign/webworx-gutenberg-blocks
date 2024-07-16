@@ -346,6 +346,26 @@ function Edit({
       value: 'ease-in-out'
     }],
     onChange: value => updateOptions('cssEase', value)
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.ToggleControl, {
+    label: "Adaptive Height",
+    checked: slickOptions.adaptiveHeight,
+    value: slickOptions.adaptiveHeight,
+    onChange: value => updateOptions('adaptiveHeight', value)
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.ToggleControl, {
+    label: "Pause on Hover",
+    checked: slickOptions.pauseOnHover,
+    value: slickOptions.pauseOnHover,
+    onChange: value => updateOptions('pauseOnHover', value)
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.ToggleControl, {
+    label: "Pause on Focus",
+    checked: slickOptions.pauseOnFocus,
+    value: slickOptions.pauseOnFocus,
+    onChange: value => updateOptions('pauseOnFocus', value)
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.ToggleControl, {
+    label: "Focus on Select",
+    checked: slickOptions.focusOnSelect,
+    value: slickOptions.focusOnSelect,
+    onChange: value => updateOptions('focusOnSelect', value)
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.RangeControl, {
     label: "Amount of slides to scroll by",
     min: 1,
@@ -355,8 +375,9 @@ function Edit({
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.RangeControl, {
     label: "Scroll by speed (ms)",
     value: slickOptions.speed,
+    step: 1000,
     min: 0,
-    max: 5000,
+    max: 50000,
     onChange: value => updateOptions('speed', value)
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.ToggleControl, {
     label: "Autoplay slides",
@@ -365,8 +386,9 @@ function Edit({
   }), slickOptions.autoplay && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.RangeControl, {
     label: "Autoplay speed (ms)",
     value: slickOptions.autoplaySpeed,
+    step: 1000,
     min: 0,
-    max: 5000,
+    max: 10000,
     onChange: value => updateOptions('autoplaySpeed', value)
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Responsive Settings', 'slick-slider'),
@@ -375,7 +397,7 @@ function Edit({
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Breakpoint', 'slick-slider'),
     value: slickOptions.responsive[0].breakpoint,
     min: 1,
-    max: 12,
+    max: 1920,
     onChange: updateResponsiveBreakpoint
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_6__.RangeControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Slides in view (responsive)', 'slick-slider'),
@@ -531,7 +553,7 @@ module.exports = window["wp"]["i18n"];
   \********************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/slick-slider","version":"0.1.0","title":"Slick Slider","category":"widgets","icon":"media-interactive","description":"An interactive slider block with the Interactivity API","textdomain":"slick-slider","supports":{"interactivity":true,"align":["full","wide"]},"attributes":{"editOffset":{"type":"number","default":1},"slickOptions":{"type":"object","default":{"slidesToShow":2,"slidesToScroll":1,"fade":false,"cssEase":"ease","speed":300,"arrows":true,"dots":false,"infinite":true,"responsive":[{"breakpoint":1,"settings":{"slidesToShow":1}}]}},"arrowStyle":{"type":"string","default":""},"arrowPosition":{"type":"string","default":"arrows-inside"},"arrowPositionY":{"type":"string","default":""},"arrowPositionX":{"type":"string","default":""},"arrowStack":{"type":"string","default":"arrows-stack-horizontal"},"dotsSize":{"type":"string","default":"dots-medium"},"arrowSize":{"type":"string","default":"arrows-medium"},"arrowWrap":{"type":"string","default":""},"theme":{"type":"string","default":"theme-dark"}},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScriptModule":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/slick-slider","version":"0.1.0","title":"Slick Slider","category":"widgets","icon":"media-interactive","description":"An interactive slider block with the Interactivity API","textdomain":"slick-slider","supports":{"interactivity":true,"align":["full","wide"]},"attributes":{"editOffset":{"type":"number","default":1},"slickOptions":{"type":"object","default":{"slidesToShow":2,"slidesToScroll":1,"fade":false,"cssEase":"ease","speed":300,"arrows":true,"dots":false,"infinite":true,"focusOnSelect":false,"pauseOnHover":true,"pauseOnFocus":true,"adaptiveHeight":false,"autoplay":false,"responsive":[{"breakpoint":1,"settings":{"slidesToShow":1}}]}},"arrowStyle":{"type":"string","default":""},"arrowPosition":{"type":"string","default":"arrows-inside"},"arrowPositionY":{"type":"string","default":""},"arrowPositionX":{"type":"string","default":""},"arrowStack":{"type":"string","default":"arrows-stack-horizontal"},"dotsSize":{"type":"string","default":"dots-medium"},"arrowSize":{"type":"string","default":"arrows-medium"},"arrowWrap":{"type":"string","default":""},"theme":{"type":"string","default":"theme-dark"}},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScriptModule":"file:./view.js"}');
 
 /***/ })
 

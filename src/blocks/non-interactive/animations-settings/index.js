@@ -8,7 +8,8 @@ import { assign } from 'lodash';
 const { createHigherOrderComponent } = wp.compose;
 const { Fragment } = wp.element;
 const { InspectorControls } = wp.blockEditor;
-const { PanelBody, SelectControl, ToggleControl, RangeControl } = wp.components;
+const { PanelBody, SelectControl, ToggleControl, RangeControl, TextControl  } = wp.components;
+import { __experimentalNumberControl as NumberControl } from '@wordpress/components';
 const { addFilter } = wp.hooks;
 const { __ } = wp.i18n;
 
@@ -148,35 +149,26 @@ const withAnimateControl = createHigherOrderComponent((BlockEdit) => {
                                         });
                                     }}
                                 />
-                                <SelectControl
+                                <NumberControl
                                     label="Animation Speed"
                                     help={__('Determines how quickly the element animates into position')}
-                                    value={inSpeed}
-                                    options={[
-                                        { label: 'Default', value: '' },
-                                        { label: 'Slow', value: 'animate__slow' },
-                                        { label: 'Slower', value: 'animate__slower' },
-                                        { label: 'Fast', value: 'animate__fast' },
-                                        { label: 'Faster', value: 'animate__faster' },
-                                    ]}
+                                    step={ 0.5 } 
+                                    min={ 0 } 
+                                    max={ 10 }
+                                    value={inSpeed} 
                                     onChange={(v) => {
                                         props.setAttributes({
                                             inSpeed: v,
                                         });
                                     }}
                                 />
-                                <SelectControl
-                                    label="Animation Delay"
-                                    help={__('Adds a delay before the element animates into position')}
-                                    value={inDelay}
-                                    options={[
-                                        { label: 'None', value: '' },
-                                        { label: '0.5 Second', value: 'animate__delay-1s' },
-                                        { label: '1 Second', value: 'animate__delay-2s' },
-                                        { label: '1.5 Seconds', value: 'animate__delay-3s' },
-                                        { label: '2 Seconds', value: 'animate__delay-4s' },
-                                        { label: '2.5 Seconds', value: 'animate__delay-5s' },
-                                    ]}
+                                <NumberControl 
+                                    label="Animation Delay" 
+                                    help={__('Adds a delay before the element animates into position')} 
+                                    value={inDelay} 
+                                    step={ 0.5 } 
+                                    min={ 0 } 
+                                    max={ 10 }
                                     onChange={(v) => {
                                         props.setAttributes({
                                             inDelay: v,

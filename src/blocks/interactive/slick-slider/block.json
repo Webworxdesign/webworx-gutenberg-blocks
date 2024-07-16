@@ -27,11 +27,18 @@
 				"speed": 300,
 				"arrows": true,
 				"dots": false,
-				"infinite": true,
-				"responsive": [{
-					"breakpoint": 1,
-					"settings": {"slidesToShow": 1}
-				}]
+				"infinite": true, 
+				"focusOnSelect": false,
+				"pauseOnHover": true, 
+				"pauseOnFocus": true,
+				"adaptiveHeight": false,
+				"autoplay": false,
+				"responsive": [
+					{
+						"breakpoint": 1,
+						"settings": {"slidesToShow": 1}
+					}
+				]
 			}
 		},
 		"arrowStyle": {

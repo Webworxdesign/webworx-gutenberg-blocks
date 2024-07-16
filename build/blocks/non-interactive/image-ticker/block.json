@@ -1,17 +1,19 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "create-block/slick-item",
-  "title": "Slick Slider Item",
+  "name": "create-block/image-ticker",
+  "version": "0.1.0",
+  "title": "Image Ticker",
   "category": "widgets",
-  "icon": "media-interactive",
-  "description": "An interactive slider item block with the Interactivity API",
-  "parent": [
-    "create-block/slick-slider"
-  ],
-  "textdomain": "create-block",
+  "icon": "images-alt",
+  "description": "An image ticker block",
+  "textdomain": "image-ticker",
   "supports": {
-    "interactivity": true
+    "interactivity": true,
+    "align": [
+      "full",
+      "wide"
+    ]
   },
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",

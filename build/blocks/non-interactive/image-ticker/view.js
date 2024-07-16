@@ -52,43 +52,30 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__;
 /************************************************************************/
 var __webpack_exports__ = {};
 /*!*********************************************************!*\
-  !*** ./src/blocks/interactive/service-dropdown/view.js ***!
+  !*** ./src/blocks/non-interactive/image-ticker/view.js ***!
   \*********************************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/interactivity */ "@wordpress/interactivity");
+/**
+ * WordPress dependencies
+ */
 
-const useEleHeight = () => {
-  const [EleHeight, setEleHeight] = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.useState)('');
-  (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const {
-      ref
-    } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getElement)();
-    setEleHeight(ref.scrollHeight);
-  }, []);
-  return EleHeight;
-};
-(0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('services-dropdown', {
-  actions: {
-    toggle: () => {
-      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
-      context.isOpen = !context.isOpen;
-    }
-  },
+(0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('image-ticker', {
   callbacks: {
-    logIsOpen: () => {
-      const {
-        isOpen
-      } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
-    },
-    serviceList: () => {
+    imageTickerInit: () => {
       const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
-      const isOpen = context.isOpen; // Ensure `isOpen` is retrieved correctly
-      const isEleHeight = useEleHeight();
-      if (isOpen) {
-        context.dropDownHeight = `${isEleHeight}px`; // Ensure height is set as a string with 'px'
-      } else {
-        context.dropDownHeight = '0px';
-      }
+      const {
+        ref
+      } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getElement)();
+
+      // Set scroll width of list
+      context.scrollListWidth = ref.scrollWidth;
+
+      // add to parent container to hide overflow
+      const parent = ref.parentElement;
+
+      // set the scroll width as a css variable
+      parent.style = '--' + context.id + '-scroll-width: -' + context.scrollListWidth + 'px';
     }
   }
 });

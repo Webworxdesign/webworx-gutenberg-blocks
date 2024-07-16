@@ -26,16 +26,16 @@ foreach ($inner_blocks as $inner_block) {
 	data-wp-interactive="image-ticker" 
   <?php echo wp_interactivity_data_wp_context( array( 'id' => $unique_id, 'scrollListWidth' => '0px' ) ); ?> > 
     <div class="ticker-track">
-      <?php echo '<div class="ticker-track-list" data-wp-init="callbacks.imageTickerInit">' . $inner_blocks_html . '</div>'; ?>
-      <?php echo '<div class="ticker-track-list">' . $inner_blocks_html . '</div>'; ?>
+      <?php echo '<div class="ticker-track-list" data-wp-init="callbacks.imageTickerInit" style="width: var(--'. $unique_id .'-scroll-width);" >' . $inner_blocks_html . '</div>'; ?>
+      <?php echo '<div class="ticker-track-list" style="width: var(--'. $unique_id .'-scroll-width);" >' . $inner_blocks_html . '</div>'; ?>
     </div>
     <style>
       @keyframes ticker {
         0% {
-          transform: translate3d(0, 0, 0);
+          transform: translateX(0);
         } 
         100% {
-          transform: translate3d(var(--<?php echo $unique_id; ?>-scroll-width), 0, 0);
+          transform: translateX(calc(-1 * var(--<?php echo $unique_id; ?>-scroll-width)));
         }
       }
     </style>

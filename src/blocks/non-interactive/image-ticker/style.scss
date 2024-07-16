@@ -6,33 +6,30 @@
  */
 
  .wp-block-create-block-image-ticker {
-    overflow: hidden;
-    white-space: nowrap;
-	
+    overflow: hidden;	
 	.ticker-track {
 		display: flex;
-		width: 100%;
-		overflow: hidden;
+  		flex-wrap: nowrap;
+		white-space: nowrap;
 		position: relative;
+		animation: ticker 60s linear infinite;
+		&:hover {
+			animation-play-state: paused;
+		}
 		.ticker-track-list {
-			display: flex;
-			animation: ticker 60s linear infinite;
-			transform-style: preserve-3d;
-			backface-visibility: hidden;
-			will-change: transform;
-			transition-behavior: smooth;
-			&:hover {
-				animation-play-state: paused;
-			}
+			float: left;
+			white-space: nowrap;
+			flex-wrap: nowrap;
+			display: flex;			
 		}
 		figure {
-			display: inline-block;
+			display: block;
+			float: left;
 			margin: 0;
 			padding: 0;
 			img {
 				max-width: unset;
-				height: 200px; 
-				width: auto;
+				height: unset; 
 			}
 		}
 	}

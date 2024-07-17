@@ -13,10 +13,15 @@
 // Generate unique id for aria-controls.
 $unique_id = wp_unique_id( 'p-' );
 
+$wrapper_attributes = get_block_wrapper_attributes(
+	array(
+	  'class' => $attributes['dropdownType'], 
+	)
+);
 ?>
 
 <div 
-	<?php echo get_block_wrapper_attributes(); ?>
+	<?php echo $wrapper_attributes; ?>
 	data-wp-interactive="services-dropdown"
 	<?php echo wp_interactivity_data_wp_context( array( 'isOpen' => false, 'dropDownHeight' => '0px' ) ); ?>
 	data-wp-watch="callbacks.dropdownIsOpen" >
@@ -29,7 +34,16 @@ $unique_id = wp_unique_id( 'p-' );
 				<path d="M13.0044 14.1119C13.0044 14.1119 14.2532 14.6328 14.6695 14.1119L26.7417 2.02677C26.7417 2.02677 27.2621 0.77652 26.7417 0.359782C26.2214 -0.0569567 25.4929 -0.161141 25.0766 0.359782L13.8368 11.6116L2.59731 0.359782C2.59731 0.359782 1.34843 -0.161141 0.932149 0.359782C0.515867 0.880705 0.411797 1.61004 0.932149 2.02677L13.0044 14.1119Z" fill="#A5A5A5"/>
 			</svg>
 		</div>
-		<button class="btn" data-wp-on--click="actions.toggle" data-wp-bind--aria-expanded="context.isOpen"">Book a Service</button>
+		<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+			<div class="wp-block-button">
+				<a class="wp-block-button__link wp-element-button" data-wp-on--click="actions.toggle">Book a Service</a>
+			</div>
+			<?php if($attributes['dropdownType'] == 'seperated') { ?>
+				<div class="wp-block-button is-style-outline">
+					<a class="wp-block-button__link wp-element-button" href="<?php echo $attributes['applyForWorkLink']; ?>" target="_blank">Apply for Work</a>
+				</div>
+			<?php } ?>
+		</div>
 	</div>
 	
 	<?php if ( ! empty( $attributes['services'] ) ) : ?>

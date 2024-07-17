@@ -10,8 +10,8 @@
 .wp-block-create-block-services-dropdown {
   display: block;
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto 40px;
+  max-width: 1000px !important;
+  margin: 0 auto 40px !important;
   position: relative;
   z-index: 9;
 }
@@ -54,60 +54,68 @@
 .wp-block-create-block-services-dropdown .services-dropdown .service-dropdown-selector[aria-expanded=true] svg {
   transform: rotate(-180deg);
 }
-@media (max-width: 781px) {
-  .wp-block-create-block-services-dropdown .services-dropdown .service-dropdown-selector {
-    padding: 10px 15px;
-    max-width: calc(100% - 145px);
-  }
+.wp-block-create-block-services-dropdown .services-dropdown .wp-block-buttons {
+  gap: 0 !important;
 }
-.wp-block-create-block-services-dropdown .services-dropdown .btn {
+.wp-block-create-block-services-dropdown .services-dropdown .wp-block-buttons .wp-block-button .wp-element-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--accent);
-  border: 1px solid var(--accent);
   border-radius: 0;
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
   width: 100%;
-  max-width: 220px;
+  max-width: 200px;
   height: 70px;
   padding: 20px 30px;
   font-size: 18px;
-  color: #ffffff;
-}
-.wp-block-create-block-services-dropdown .services-dropdown .btn:hover {
-  background-color: var(--off-road-green);
-  border-color: var(--off-road-green);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
 }
 @media (max-width: 781px) {
-  .wp-block-create-block-services-dropdown .services-dropdown .btn {
+  .wp-block-create-block-services-dropdown .services-dropdown .wp-block-buttons .wp-block-button .wp-element-button {
     padding: 10px 15px;
     max-width: 145px;
     font-size: 16px;
   }
 }
-.wp-block-create-block-services-dropdown .services-dropdown.seperated .service-dropdown-selector {
-  border-radius: 20px;
-  max-width: calc(100% - 185px);
+.wp-block-create-block-services-dropdown .services-dropdown .wp-block-buttons .wp-block-button.is-style-outline .wp-element-button {
+  background-color: #ffffff;
+  border: 1px solid #007749;
+  color: #007749;
 }
-.wp-block-create-block-services-dropdown .services-dropdown.seperated .btn {
-  border-radius: 40px;
-  margin-right: 20px;
+.wp-block-create-block-services-dropdown .services-dropdown .wp-block-buttons .wp-block-button.is-style-outline .wp-element-button:hover {
+  background-color: #007749;
+  color: #ffffff;
 }
 @media (max-width: 781px) {
-  .wp-block-create-block-services-dropdown .services-dropdown.seperated .btn {
+  .wp-block-create-block-services-dropdown .services-dropdown {
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+  .wp-block-create-block-services-dropdown .services-dropdown .service-dropdown-selector {
     padding: 10px 15px;
-    max-width: 165px;
-    font-size: 16px;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  .wp-block-create-block-services-dropdown .services-dropdown .wp-block-buttons {
+    margin: 15px auto 0;
+  }
+  .wp-block-create-block-services-dropdown .services-dropdown .wp-block-buttons .wp-block-button .wp-element-button {
+    border-radius: 40px;
   }
 }
-.wp-block-create-block-services-dropdown .services-dropdown.seperated + .services-list {
-  max-width: calc(100% - 240px);
-}
-@media (max-width: 781px) {
-  .wp-block-create-block-services-dropdown .services-dropdown.seperated + .services-list {
-    max-width: calc(100% - 185px);
+@media (max-width: 480px) {
+  .wp-block-create-block-services-dropdown .services-dropdown .wp-block-buttons {
+    width: 100%;
+  }
+  .wp-block-create-block-services-dropdown .services-dropdown .wp-block-buttons .wp-block-button {
+    width: 100%;
+  }
+  .wp-block-create-block-services-dropdown .services-dropdown .wp-block-buttons .wp-block-button .wp-element-button {
+    width: 100%;
+    max-width: 100%;
   }
 }
 .wp-block-create-block-services-dropdown .services-list {
@@ -174,7 +182,8 @@
 }
 @media (max-width: 781px) {
   .wp-block-create-block-services-dropdown .services-list {
-    max-width: calc(100% - 145px);
+    top: 70px;
+    max-width: 100%;
   }
   .wp-block-create-block-services-dropdown .services-list .title-plain-text {
     font-size: 16px;
@@ -286,4 +295,70 @@
   background-repeat: no-repeat;
   background-position: center;
   font-size: 12px;
+}
+.wp-block-create-block-services-dropdown.seperated {
+  max-width: 1280px !important;
+  margin: 0 auto 40px !important;
+}
+.wp-block-create-block-services-dropdown.seperated .services-dropdown .service-dropdown-selector {
+  border-radius: 20px;
+  max-width: calc(100% - 440px);
+}
+@media (max-width: 781px) {
+  .wp-block-create-block-services-dropdown.seperated .services-dropdown .service-dropdown-selector {
+    max-width: 100%;
+  }
+}
+.wp-block-create-block-services-dropdown.seperated .services-dropdown .wp-block-buttons .wp-block-button {
+  margin-right: 20px;
+}
+.wp-block-create-block-services-dropdown.seperated .services-dropdown .wp-block-buttons .wp-block-button .wp-element-button {
+  border-radius: 40px;
+  width: 100%;
+  max-width: 220px;
+  height: 70px;
+  padding: 20px 30px;
+  font-size: 18px;
+  text-decoration: none;
+}
+@media (max-width: 781px) {
+  .wp-block-create-block-services-dropdown.seperated .services-dropdown .wp-block-buttons .wp-block-button .wp-element-button {
+    padding: 10px 15px;
+    max-width: 145px;
+    font-size: 16px;
+  }
+}
+.wp-block-create-block-services-dropdown.seperated .services-dropdown + .services-list {
+  max-width: calc(100% - 440px);
+}
+@media (max-width: 781px) {
+  .wp-block-create-block-services-dropdown.seperated .services-dropdown + .services-list {
+    max-width: 100%;
+  }
+}
+@media (max-width: 781px) {
+  .wp-block-create-block-services-dropdown.seperated {
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+  .wp-block-create-block-services-dropdown.seperated .wp-block-buttons {
+    margin: 15px auto 0;
+  }
+  .wp-block-create-block-services-dropdown.seperated .wp-block-buttons .wp-block-button:first-child {
+    margin-right: 0 !important;
+  }
+  .wp-block-create-block-services-dropdown.seperated .wp-block-buttons .wp-block-button .wp-element-button {
+    border-radius: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .wp-block-create-block-services-dropdown.seperated .wp-block-buttons {
+    margin: 15px auto 0;
+  }
+  .wp-block-create-block-services-dropdown.seperated .wp-block-buttons .wp-block-button {
+    margin: 15px 0 0 !important;
+  }
+  .wp-block-create-block-services-dropdown.seperated .wp-block-buttons .wp-block-button .wp-element-button {
+    max-width: 100% !important;
+  }
 }

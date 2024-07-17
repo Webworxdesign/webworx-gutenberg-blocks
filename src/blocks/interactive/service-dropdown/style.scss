@@ -8,8 +8,8 @@
  .wp-block-create-block-services-dropdown {
 	display: block;
 	width: 100%;
-	max-width: 1000px; 
-	margin: 0 auto 40px;
+	max-width: 1000px !important; 
+	margin: 0 auto 40px !important;
 	position: relative;
 	z-index: 9;
 	* {
@@ -51,56 +51,74 @@
 					transform: rotate(180deg);
 				}
 			}
-			@media (max-width: 781px) {
-				padding: 10px 15px;
-				max-width: calc(100% - 145px);
+		}
+		.wp-block-buttons {
+			gap: 0 !important;
+			.wp-block-button {
+				.wp-element-button {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-radius: 0;
+					border-top-right-radius: 40px;
+					border-bottom-right-radius: 40px;
+					width: 100%;
+					max-width: 200px; 
+					height: 70px;
+					padding: 20px 30px;
+					font-size: 18px;
+					font-weight: 700;
+					text-align: center;
+					text-decoration: none;
+					@media (max-width: 781px) {
+						padding: 10px 15px;
+						max-width: 145px; 
+						font-size: 16px;
+					}
+				}
+				&.is-style-outline {
+					.wp-element-button {
+						background-color: #ffffff;
+						border: 1px solid #007749;
+						color: #007749;
+						&:hover {
+							background-color: #007749;
+							color: #ffffff;
+						}
+					}
+				}
 			}
 		}
-		.btn {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: var(--accent);
-			border: 1px solid var(--accent);
-			border-radius: 0;
-			border-top-right-radius: 40px;
-			border-bottom-right-radius: 40px;
-			width: 100%;
-			max-width: 220px; 
-			height: 70px;
-			padding: 20px 30px;
-			font-size: 18px;
-			color: #ffffff;
-			&:hover {
-				background-color: var(--off-road-green);
-				border-color: var(--off-road-green);
-			}
-			@media (max-width: 781px) {
-				padding: 10px 15px;
-				max-width: 145px; 
-				font-size: 16px;
-			}
-		}
-		&.seperated {
+		@media (max-width: 781px) {
+			flex-wrap: wrap;
+			max-width: 100%;
 			.service-dropdown-selector {
+				padding: 10px 15px;
+				max-width: 100%;
 				border-radius: 20px;
-				max-width: calc(100% - 185px); 
 			}
-			.btn {
-				border-radius: 40px;
-				margin-left: 20px;
-				@media (max-width: 781px) {
-					padding: 10px 15px;
-					max-width: 165px; 
-					font-size: 16px;
+			.wp-block-buttons {
+				margin: 15px auto 0;
+				.wp-block-button {
+					.wp-element-button {
+						border-radius: 40px;
+					}
 				}
 			}
-			+ .services-list {
-				max-width: calc(100% - 240px);
-				@media (max-width: 781px) {
-					max-width: calc(100% - 185px);
+
+		}
+		@media (max-width: 480px) {
+			.wp-block-buttons {
+				width: 100%;
+				.wp-block-button {
+					width: 100%;
+					.wp-element-button {
+						width: 100%;
+						max-width: 100%;
+					}
 				}
 			}
+
 		}
 	}
 	.services-list {
@@ -165,7 +183,8 @@
 			font-size: 16px;
 		}
 		@media (max-width: 781px) {
-			max-width: calc(100% - 145px);
+			top: 70px;
+			max-width: 100%;
 			.title-plain-text {
 				font-size: 16px;
 			}
@@ -286,6 +305,74 @@
 			font-size: 12px;
 		}
 		
+	}
+	
+	&.seperated {
+		max-width: 1280px !important; 
+		margin: 0 auto 40px !important;
+		.services-dropdown {
+			.service-dropdown-selector {
+				border-radius: 20px;
+				max-width: calc(100% - 440px); 
+				@media (max-width: 781px) {
+					max-width: 100%;
+				}
+			}
+			.wp-block-buttons {
+				.wp-block-button {
+					margin-left: 20px;
+					.wp-element-button {
+						border-radius: 40px;
+						width: 100%;
+						max-width: 220px; 
+						height: 70px;
+						padding: 20px 30px;
+						font-size: 18px;
+						text-decoration: none;
+						@media (max-width: 781px) {
+							padding: 10px 15px;
+							max-width: 145px; 
+							font-size: 16px;
+						}
+					}
+				}
+			}
+			+ .services-list {
+				max-width: calc(100% - 440px);
+				@media (max-width: 781px) {
+					max-width: 100%;
+				}
+			}
+		}
+		
+		@media (max-width: 781px) {
+			flex-wrap: wrap;
+			max-width: 100%;
+			.wp-block-buttons {
+				margin: 15px auto 0;
+				.wp-block-button {
+					&:first-child {
+						margin-left: 0 !important;
+					}
+					.wp-element-button {
+						border-radius: 40px;
+					}
+				}
+			}
+
+		}
+		@media (max-width: 480px) {
+			.wp-block-buttons {
+				margin: 15px auto 0;
+				.wp-block-button {
+					margin: 15px 0 0 !important;
+					.wp-element-button {
+						max-width: 100% !important;
+					}
+				}
+			}
+
+		}
 	}
 	
 }

@@ -62,9 +62,9 @@ function Edit({
   attributes,
   setAttributes
 }) {
-  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
   const {
     dropdownType,
+    applyForWorkLink,
     dropdownPlaceholder,
     dropdownBackground,
     services,
@@ -103,6 +103,11 @@ function Edit({
     });
   };
 
+  // add class to blockProps 
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+    className: dropdownType
+  });
+
   // Retrieve the themes color settings from the block editors' data
   const colors = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)('core/block-editor').getSettings().colors;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -125,6 +130,12 @@ function Edit({
         dropdownType: v
       });
     }
+  }), dropdownType == 'seperated' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(TextControl, {
+    label: "Apply for Work Link",
+    value: applyForWorkLink,
+    onChange: v => setAttributes({
+      applyForWorkLink: v
+    })
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(TextControl, {
     label: "Dropdown Placeholder Text",
     value: dropdownPlaceholder,
@@ -156,9 +167,20 @@ function Edit({
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
     d: "M13.0044 14.1119C13.0044 14.1119 14.2532 14.6328 14.6695 14.1119L26.7417 2.02677C26.7417 2.02677 27.2621 0.77652 26.7417 0.359782C26.2214 -0.0569567 25.4929 -0.161141 25.0766 0.359782L13.8368 11.6116L2.59731 0.359782C2.59731 0.359782 1.34843 -0.161141 0.932149 0.359782C0.515867 0.880705 0.411797 1.61004 0.932149 2.02677L13.0044 14.1119Z",
     fill: "#A5A5A5"
-  }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    className: "btn"
-  }, "Book a Service")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    class: "wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    class: "wp-block-button"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    class: "wp-block-button__link wp-element-button",
+    href: "#"
+  }, "Book a Service")), dropdownType == 'seperated' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    class: "wp-block-button is-style-outline"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    class: "wp-block-button__link wp-element-button",
+    href: "#",
+    target: "_blank"
+  }, "Apply for Work")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "services-list"
   }, services.map((service, index) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "service-item",
@@ -370,7 +392,7 @@ module.exports = window["wp"]["i18n"];
   \************************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/services-dropdown","version":"0.1.0","title":"Services Dropdown","category":"widgets","icon":"media-interactive","description":"An interactive block with the Interactivity API","example":{},"supports":{"interactivity":true},"attributes":{"id":{"type":"string","default":""},"dropdownType":{"type":"string","default":"contained"},"dropdownPlaceholder":{"type":"string","default":"Choose the service you need"},"dropdownBackground":{"type":"string","default":"#f0f0f0"},"services":{"type":"array","default":[]}},"textdomain":"services-dropdown","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScriptModule":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/services-dropdown","version":"0.1.0","title":"Services Dropdown","category":"widgets","icon":"media-interactive","description":"An interactive block with the Interactivity API","example":{},"supports":{"interactivity":true},"attributes":{"id":{"type":"string","default":""},"dropdownType":{"type":"string","default":"contained"},"applyForWorkLink":{"type":"string","default":"#"},"dropdownPlaceholder":{"type":"string","default":"Choose the service you need"},"dropdownBackground":{"type":"string","default":"#f0f0f0"},"services":{"type":"array","default":[]}},"textdomain":"services-dropdown","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScriptModule":"file:./view.js"}');
 
 /***/ })
 

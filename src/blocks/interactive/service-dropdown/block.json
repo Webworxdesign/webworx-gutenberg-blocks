@@ -20,6 +20,10 @@
 			"type": "string",
 			"default": "contained"
 		},
+		"applyForWorkLink": {
+			"type": "string",
+			"default": "#"
+		}, 
 		"dropdownPlaceholder": {
 			"type": "string",
 			"default": "Choose the service you need"

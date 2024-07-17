@@ -29,8 +29,7 @@ const { PanelBody, SelectControl, ColorPalette, TextControl } = wp.components;
  * @return {Element} Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
-	const blockProps = useBlockProps();
-	const { dropdownType, dropdownPlaceholder, dropdownBackground, services, id } = attributes;
+	const { dropdownType, applyForWorkLink, dropdownPlaceholder, dropdownBackground, services, id } = attributes;
 
 	if (!id) {
 		const newId = `service${Math.floor(Math.random() * 100)}`;
@@ -56,6 +55,11 @@ export default function Edit( { attributes, setAttributes } ) {
 		};
 		setAttributes({ services: [...services, newService] });
 	};
+
+	// add class to blockProps 
+	const blockProps = useBlockProps( {
+		className: dropdownType,
+	});
 
 	// Retrieve the themes color settings from the block editors' data
 	const colors = useSelect('core/block-editor').getSettings().colors;
@@ -83,6 +87,13 @@ export default function Edit( { attributes, setAttributes } ) {
 									});
 								}}
 							/>
+							{ dropdownType == 'seperated' && 
+								<TextControl
+									label="Apply for Work Link" 
+									value={applyForWorkLink}
+									onChange={(v) => setAttributes({ applyForWorkLink: v })}
+								/>
+							}
 							<TextControl
 								label="Dropdown Placeholder Text" 
 								value={dropdownPlaceholder}
@@ -94,7 +105,7 @@ export default function Edit( { attributes, setAttributes } ) {
 
 							<ColorPalette
 								colors={colors} 
-								value={dropdownBackground}
+								value={dropdownBackground} 
 								onChange={(color) => setAttributes({ dropdownBackground: color })} 
 							/>
 
@@ -110,7 +121,16 @@ export default function Edit( { attributes, setAttributes } ) {
 						<path d="M13.0044 14.1119C13.0044 14.1119 14.2532 14.6328 14.6695 14.1119L26.7417 2.02677C26.7417 2.02677 27.2621 0.77652 26.7417 0.359782C26.2214 -0.0569567 25.4929 -0.161141 25.0766 0.359782L13.8368 11.6116L2.59731 0.359782C2.59731 0.359782 1.34843 -0.161141 0.932149 0.359782C0.515867 0.880705 0.411797 1.61004 0.932149 2.02677L13.0044 14.1119Z" fill="#A5A5A5"/>
 					</svg>
 				</div>
-				<button className="btn">Book a Service</button>
+				<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+					<div class="wp-block-button">
+						<a class="wp-block-button__link wp-element-button" href="#">Book a Service</a>
+					</div>
+					{ dropdownType == 'seperated' && 
+						<div class="wp-block-button is-style-outline">
+							<a class="wp-block-button__link wp-element-button" href="#" target="_blank">Apply for Work</a>
+						</div>
+					}
+				</div>
 			</div>
 			<div className="services-list">
 				{services.map((service, index) => (

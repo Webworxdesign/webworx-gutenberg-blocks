@@ -6,7 +6,7 @@ import { getElement, store, getContext, useState, useEffect } from '@wordpress/i
 store( 'slick-slider-block', {
 	callbacks: {
 		slickSlider: () => {
-			console.log('slickSlider');
+			// console.log('slickSlider');
 		},
 	},
 } );

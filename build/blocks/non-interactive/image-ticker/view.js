@@ -74,7 +74,6 @@ __webpack_require__.r(__webpack_exports__);
       Array.from(ref.children).forEach(element => {
         scrollWidthSum += element.scrollWidth;
       });
-      console.log("ref", scrollWidthSum);
 
       // add to parent container to hide overflow
       const parent = ref.parentElement;

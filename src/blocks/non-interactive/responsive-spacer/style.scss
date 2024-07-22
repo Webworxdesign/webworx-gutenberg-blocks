@@ -9,6 +9,7 @@
 	display: block;
 	width: 100%;
 	clear: both;
+	margin: 0 !important; 
 	&.is-selected {
 		background: #0000001a;
 	}

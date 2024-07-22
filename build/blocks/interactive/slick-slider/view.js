@@ -63,7 +63,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('slick-slider-block', {
   callbacks: {
     slickSlider: () => {
-      console.log('slickSlider');
+      // console.log('slickSlider');
     }
   }
 });

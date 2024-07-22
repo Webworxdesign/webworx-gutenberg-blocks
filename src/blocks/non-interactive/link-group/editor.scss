@@ -1,0 +1,20 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-link-group {
+  clear: both;
+  padding: 10px;
+}
+.block-editor-link-control {
+  min-width: unset;
+  position: relative;
+}
+.block-editor-block-inspector {
+  .block-editor-url-input.block-editor-link-control__field {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}

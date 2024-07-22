@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/link-group",
+	"version": "0.1.0",
+	"title": "Link Group",
+	"category": "widgets",
+	"icon": "admin-links",
+	"description": "An link group block",
+	"textdomain": "link-group",
+	"supports": {
+		"interactivity": true,
+		"align": ["full", "wide"]
+	},
+	"attributes": {
+		"url": { 
+			"type": "string",
+			"default": ""
+		}, 
+		"openInNewTab": {
+			"type": "boolean",
+			"default": false
+		}
+	}, 
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScriptModule": "file:./view.js"
+}

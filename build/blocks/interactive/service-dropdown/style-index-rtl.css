@@ -156,8 +156,8 @@
   position: relative;
 }
 .wp-block-create-block-services-dropdown .services-list .service-fields .service-icon .service-icon__image {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 30px;
   margin-left: 10px;
   overflow: hidden;
   font-size: 14px;

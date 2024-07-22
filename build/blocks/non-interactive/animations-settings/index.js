@@ -184,10 +184,6 @@ const addControlAttribute = (settings, name) => {
     },
     outDelay: {
       type: 'string'
-    },
-    threshold: {
-      type: 'number',
-      default: 7.5
     }
   });
   return settings;
@@ -209,8 +205,7 @@ const withAnimateControl = createHigherOrderComponent(BlockEdit => {
       triggerIn,
       inSpeed,
       inDelay,
-      inName,
-      threshold
+      inName
     } = props.attributes;
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(BlockEdit, {
       ...props
@@ -276,18 +271,6 @@ const withAnimateControl = createHigherOrderComponent(BlockEdit => {
           inDelay: v
         });
       }
-    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(RangeControl, {
-      label: "Threshold (%)",
-      help: __('The percentage of the screen which the animation begins'),
-      value: threshold,
-      onChange: v => {
-        props.setAttributes({
-          threshold: v
-        });
-      },
-      min: 5,
-      max: 100,
-      step: 5
     })))));
   };
 }, 'withAnimateControl');
@@ -311,15 +294,13 @@ const addExtraProps = (saveElementProps, blockType, attributes) => {
     triggerIn,
     inName,
     inSpeed,
-    inDelay,
-    threshold
+    inDelay
   } = attributes;
   let propsObj = {};
   if (triggerIn) {
     propsObj['animate-in'] = inName;
     propsObj['animate-speed'] = inSpeed;
     propsObj['animate-delay'] = inDelay;
-    propsObj['animate-threshold'] = threshold;
   }
   if (propsObj) {
     (0,lodash__WEBPACK_IMPORTED_MODULE_1__.assign)(saveElementProps, propsObj);

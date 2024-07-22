@@ -16,7 +16,6 @@ store( 'image-ticker', {
 			Array.from(ref.children).forEach(element => {
 				scrollWidthSum += element.scrollWidth
 			});
-			console.log("ref",scrollWidthSum);
 
 			// add to parent container to hide overflow
 			const parent = ref.parentElement;

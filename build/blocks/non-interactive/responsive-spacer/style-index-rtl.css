@@ -19,6 +19,7 @@
 
 .responsive-spacer {
   height: var(--mobile-height, var(--tablet-height, var(--desktop-height)));
+  margin: 0px !important;
 }
 @media (min-width: 782px) {
   .responsive-spacer {

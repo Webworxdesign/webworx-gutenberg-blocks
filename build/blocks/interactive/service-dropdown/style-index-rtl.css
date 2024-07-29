@@ -11,7 +11,7 @@
   display: block;
   width: 100%;
   max-width: 1000px !important;
-  margin: 0 auto 40px !important;
+  margin: 0 auto 30px !important;
   position: relative;
   z-index: 9;
 }
@@ -32,7 +32,7 @@
   border-bottom-right-radius: 20px;
   width: 100%;
   max-width: calc(100% - 220px);
-  height: 70px;
+  height: 60px;
   padding: 20px 30px;
   font-size: 16px;
   text-align: right;
@@ -66,9 +66,9 @@
   border-bottom-left-radius: 40px;
   width: 100%;
   max-width: 200px;
-  height: 70px;
+  height: 60px;
   padding: 20px 30px;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
@@ -81,7 +81,7 @@
   }
 }
 .wp-block-create-block-services-dropdown .services-dropdown .wp-block-buttons .wp-block-button.is-style-outline .wp-element-button {
-  background-color: #ffffff;
+  background-color: transparent;
   border: 1px solid #007749;
   color: #007749;
 }
@@ -174,11 +174,12 @@
   color: var(--black);
 }
 .wp-block-create-block-services-dropdown .services-list .title-plain-text {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 }
 .wp-block-create-block-services-dropdown .services-list .description-plain-text {
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 1.2;
 }
 @media (max-width: 781px) {
   .wp-block-create-block-services-dropdown .services-list {
@@ -316,9 +317,9 @@
   border-radius: 40px;
   width: 100%;
   max-width: 220px;
-  height: 70px;
+  height: 60px;
   padding: 20px 30px;
-  font-size: 18px;
+  font-size: 17px;
   text-decoration: none;
 }
 @media (max-width: 781px) {

@@ -30,13 +30,23 @@ function Edit({
   setAttributes
 }) {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
-  const TEMPLATE = [['core/image'], ['core/image'], ['core/image'], ['core/image']];
+  const TEMPLATE = [['core/image', {
+    className: 'image-ticker__image skip-lazy'
+  }], ['core/image', {
+    className: 'image-ticker__image skip-lazy'
+  }], ['core/image', {
+    className: 'image-ticker__image skip-lazy'
+  }], ['core/image', {
+    className: 'image-ticker__image skip-lazy'
+  }]];
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...blockProps
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
     template: TEMPLATE,
     allowedBlocks: ['core/image'],
-    renderAppender: () => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.ButtonBlockAppender, null)
+    renderAppender: () => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks.ButtonBlockAppender, {
+      className: "your-custom-class"
+    })
   })));
 }
 

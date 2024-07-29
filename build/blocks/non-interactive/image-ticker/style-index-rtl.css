@@ -15,7 +15,7 @@
   flex-wrap: nowrap;
   white-space: nowrap;
   position: relative;
-  animation: ticker 60s linear infinite;
+  animation: ticker 120s linear infinite;
 }
 .wp-block-create-block-image-ticker .ticker-track:hover {
   animation-play-state: paused;
@@ -35,4 +35,10 @@
 .wp-block-create-block-image-ticker .ticker-track figure img {
   max-width: unset;
   height: unset;
+}
+@media only screen and (max-width: 768px) {
+  .wp-block-create-block-image-ticker .ticker-track figure img {
+    height: 160px;
+    width: auto;
+  }
 }

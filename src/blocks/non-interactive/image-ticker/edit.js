@@ -7,10 +7,10 @@ export default function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps();
 
 	const TEMPLATE = [
-		['core/image'],
-		['core/image'],
-		['core/image'],
-		['core/image']
+		['core/image', { className: 'image-ticker__image skip-lazy' }],
+		['core/image', { className: 'image-ticker__image skip-lazy' }],
+		['core/image', { className: 'image-ticker__image skip-lazy' }],
+		['core/image', { className: 'image-ticker__image skip-lazy' }]
 	];
 
 	return (
@@ -19,7 +19,7 @@ export default function Edit({ attributes, setAttributes }) {
 				<InnerBlocks
 					template={TEMPLATE}
 					allowedBlocks={['core/image']}
-					renderAppender={() => <InnerBlocks.ButtonBlockAppender />}
+					renderAppender={() => <InnerBlocks.ButtonBlockAppender className="your-custom-class"/>}
 				/>
 			</div>
 		</Fragment>

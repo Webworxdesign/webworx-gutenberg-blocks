@@ -36,7 +36,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
 		</div>
 		<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
 			<div class="wp-block-button">
-				<a class="wp-block-button__link wp-element-button" data-wp-on--click="actions.toggle">Book a Service</a>
+				<a class="wp-block-button__link wp-element-button" href="https://sweepsouth.com/book/" target="_blank" >Book a Service</a>
 			</div>
 			<?php if($attributes['dropdownType'] == 'seperated') { ?>
 				<div class="wp-block-button is-style-outline">

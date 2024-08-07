@@ -15,9 +15,15 @@
 	* {
 		box-sizing: border-box;
 	}
+	&.hide-apply-button {
+		.wp-block-buttons .wp-block-button.is-style-outline {
+			display: none;
+		}
+	}
 	.services-dropdown {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		.service-dropdown-selector {
 			display: flex;
 			align-items: center;
@@ -32,6 +38,7 @@
 			padding: 20px 30px;
 			font-size: 16px;
 			text-align: left;
+			position: relative;
 			cursor: pointer;
 			span {
 				margin-right: 10px;
@@ -47,7 +54,7 @@
 				transition: all 0.3s ease;
 			}
 			&[aria-expanded="true"] {
-				svg {
+				> svg {
 					transform: rotate(180deg);
 				}
 			}
@@ -125,7 +132,6 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		max-width: calc(100% - 220px);
 		padding: 0 30px;
 		background-color: #ffffff;
 		border-radius: 5px;
@@ -135,11 +141,38 @@
 		left: 0;
 		overflow: hidden;
 		transition: all 0.5s ease; 
+		max-height: 315px;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			-webkit-appearance: none;
+		}
+		
+		&::-webkit-scrollbar:vertical {
+			width: 10px;
+		}
+		
+		&::-webkit-scrollbar:horizontal {
+			height: 10px;
+		}
+		
+		&::-webkit-scrollbar-thumb {
+			background-color: #f0f0f0;
+			border-radius: 10px;
+			border: 2px solid #ffffff;
+		}
+		
+		&::-webkit-scrollbar-track {
+			border-radius: 10px;
+			background-color: #ffffff;
+		}
 		&.show-dropdown {
 			height: auto;
 		}
 		.service-item {
 			padding: 10px 0;
+			.service-item {
+				padding: 8px 0;
+			}
 			&:first-child {
 				padding-top: 20px;
 			}
@@ -153,11 +186,11 @@
 			justify-content: space-between;
 			.service-icon {
 				display: block;
-				width: 90px;
+				width: 80px;
 				position: relative;
 				.service-icon__image {
-					width: 40px;
-					height: 30px;
+					width: 53px;
+  					height: 40px;
 					margin-right: 10px;
 					overflow: hidden;
 					font-size: 14px;
@@ -176,12 +209,13 @@
 			color: var(--black);
 		}
 		.title-plain-text {
-			font-size: 16px;
+			font-size: 15px;
+  			line-height: 1.4;
 			font-weight: 700;
 		}
 		.description-plain-text {
-			font-size: 14px;
-			line-height: 1.2;
+			font-size: 13px;
+  			line-height: 1.2;
 		}
 		@media (max-width: 781px) {
 			top: 70px;
@@ -358,6 +392,23 @@
 					.wp-element-button {
 						border-radius: 40px;
 					}
+				}
+			}
+
+		}
+		@media (max-width: 779px) {
+			flex-wrap: wrap;
+			max-width: 100%;
+			.services-list {
+				.service-fields .service-icon {
+					width: 62px;
+					.service-icon__image {
+						width: 35px;
+						height: 25px;
+					}
+				}
+				.description-plain-text {
+					display: none;
 				}
 			}
 

@@ -33,20 +33,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
 			<svg width="20" height="10" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M13.0044 14.1119C13.0044 14.1119 14.2532 14.6328 14.6695 14.1119L26.7417 2.02677C26.7417 2.02677 27.2621 0.77652 26.7417 0.359782C26.2214 -0.0569567 25.4929 -0.161141 25.0766 0.359782L13.8368 11.6116L2.59731 0.359782C2.59731 0.359782 1.34843 -0.161141 0.932149 0.359782C0.515867 0.880705 0.411797 1.61004 0.932149 2.02677L13.0044 14.1119Z" fill="#A5A5A5"/>
 			</svg>
-		</div>
-		<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-			<div class="wp-block-button">
-				<a class="wp-block-button__link wp-element-button" href="https://sweepsouth.com/book/" target="_blank" >Book a Service</a>
-			</div>
-			<?php if($attributes['dropdownType'] == 'seperated') { ?>
-				<div class="wp-block-button is-style-outline">
-					<a class="wp-block-button__link wp-element-button" href="<?php echo $attributes['applyForWorkLink']; ?>" target="_blank">Apply for Work</a>
-				</div>
-			<?php } ?>
-		</div>
-	</div>
-	
-	<?php if ( ! empty( $attributes['services'] ) ) : ?>
+			<?php if ( ! empty( $attributes['services'] ) ) : ?>
 		<div class="services-list" data-wp-run="callbacks.serviceList" data-wp-class--show-dropdown="context.isOpen" data-wp-style--height="context.dropDownHeight" >
 			<?php foreach ( $attributes['services'] as $service ) : ?>
 				<div class="service-item">
@@ -82,4 +69,18 @@ $wrapper_attributes = get_block_wrapper_attributes(
 			<?php endforeach; ?>
 		</div>
 	<?php endif; ?>
+		</div>
+		<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+			<div class="wp-block-button">
+				<a class="wp-block-button__link wp-element-button" href="https://sweepsouth.com/book/" target="_blank" >Book a Service</a>
+			</div>
+			<?php if($attributes['dropdownType'] == 'seperated') { ?>
+				<div class="wp-block-button is-style-outline">
+					<a class="wp-block-button__link wp-element-button" href="<?php echo $attributes['applyForWorkLink']; ?>" target="_blank">Apply for Work</a>
+				</div>
+			<?php } ?>
+		</div>
+	</div>
+	
+	
 </div>
